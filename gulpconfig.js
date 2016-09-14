@@ -45,7 +45,7 @@ var options = {
 	},
 	eslint: {
 		quiet: true,
-		configFile: '/home/knubbe/Dropbox/.eslintrc'
+		configFile: '/home/knubbe/.eslintrc'
 	}
 };
 
