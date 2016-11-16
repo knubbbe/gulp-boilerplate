@@ -10,16 +10,19 @@ var autoprefixer_options = [
 
 var paths = {
 	project: {
-		base: '/home/knubbe/www/westart/project/html/',
-		proxy: 'project.westart.se'
+		base:     '/home/knubbe/www/westart/project/html/',
+		protocol: 'http://',
+		proxy:    'project.westart.se'
 		// proxy: 'sub.project.westart.se'
 	},
 	script: {
 		src: [
 		'/home/knubbe/www/westart/project/html/content/themes/theme/js/scripts.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/js.cookie.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/wNumb.js',
+		'/home/knubbe/www/westart/project/html/content/themes/theme/js/clndr.js',
 		'/home/knubbe/www/westart/project/html/content/themes/theme/js/jquery.fancybox.js',
+		'/home/knubbe/www/westart/project/html/content/themes/theme/js/js.cookie.js',
+		'/home/knubbe/www/westart/project/html/content/themes/theme/js/sticky-header.js',
+		'/home/knubbe/www/westart/project/html/content/themes/theme/js/wNumb.js',
 		'!/home/knubbe/www/westart/project/html/content/themes/theme/js/**/*.min.js'
 		],
 		dest: '/home/knubbe/www/westart/project/html/content/themes/theme/js/min',

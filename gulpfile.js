@@ -43,7 +43,7 @@ gulp.task('compile:scss', function () {
 gulp.task('serve', ['compile:js', 'compile:scss'], function() {
 	browserSync.init({
 		open:      false,
-		proxy:     gulpconfig.paths.project.proxy,
+		proxy:     gulpconfig.paths.project.protocol + gulpconfig.paths.project.proxy,
 		port:      8080,
 		ghostMode: false,
 		files: [
