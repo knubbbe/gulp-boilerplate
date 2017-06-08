@@ -22,7 +22,7 @@ gulp.task('compile:js', function(){
 		// .pipe(notify(gulpconfig.notifications.script));
 });
 
-gulp.task('compile:scss', function () {
+gulp.task('compile:scss', function() {
 	var tasks = gulpconfig.paths.style.folders.map(function(folder){
 		return gulp
 			.src(folder + 'scss/*.scss', { base: folder + 'scss' })
@@ -33,7 +33,7 @@ gulp.task('compile:scss', function () {
 			}))
 			.pipe(autoprefixer())
 			.pipe(gulp.dest(folder))
-			.pipe(browserSync.stream())
+			.pipe(browserSync.stream());
 			// .pipe(notify(gulpconfig.notifications.style));
 	});
 
@@ -59,7 +59,7 @@ gulp.task('serve', ['compile:js', 'compile:scss'], function() {
 	gulp.watch([
 		gulpconfig.paths.project.base + "/**/*.php",
 		gulpconfig.paths.project.base + "/content/plugins/**/*.js",
-		gulpconfig.paths.project.base + "/content/themes/**/*.js",
+		gulpconfig.paths.project.base + "/content/themes/**/*.js"
 	], { interval: 500 }, ['browser-reload']);
 });
 
@@ -68,7 +68,7 @@ gulp.task('watch', ['compile:js', 'compile:scss'], function() {
 	gulp.watch(gulpconfig.paths.style.src, { interval: 500 }, ['compile:scss']);
 });
 
-gulp.task('browser-reload', function () {
+gulp.task('browser-reload', function() {
 	browserSync.reload();
 });
 
