@@ -1,4 +1,5 @@
 var path = require('path');
+var htmlPath = '/home/knubbe/www/westart/eckero/html/';
 
 // Browser definitions for autoprefixer
 var autoprefixer_options = [
@@ -9,34 +10,79 @@ var autoprefixer_options = [
 ];
 
 var paths = {
-	project: {
-		base:     '/home/knubbe/www/westart/project/html/',
-		protocol: 'http://',
-		proxy:    'project.westart.se'
+	'project': {
+		'base':     '/home/knubbe/www/westart/project/html/',
+		'protocol': 'http://',
+		'proxy':    'project.westart.se'
 		// proxy: 'sub.project.westart.se'
 	},
-	script: {
-		src: [
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/scripts.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/clndr.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/jquery.fancybox.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/js.cookie.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/sticky-header.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/wNumb.js',
-		'!/home/knubbe/www/westart/project/html/content/themes/theme/js/**/*.min.js'
-		],
-		dest: '/home/knubbe/www/westart/project/html/content/themes/theme/js/min',
-		base: '/home/knubbe/www/westart/project/html/content/themes/theme/js/'
+
+	'script': {
+		'theme': {
+			'src': [
+				htmlPath + 'content/themes/eckero-theme/js/*.js',
+				'!' + htmlPath + 'content/themes/eckero-theme/js/select2_locale*.js'
+			],
+			'dest': htmlPath + 'content/themes/eckero-theme/js/min/',
+			'base': htmlPath + 'content/themes/eckero-theme/js/'
+		},
+
+		'theme-vendor': {
+			'src': [
+				htmlPath + 'content/themes/eckero-theme/js/vendor/*.js',
+			],
+			'dest': htmlPath + 'content/themes/eckero-theme/js/min/vendor/',
+			'base': htmlPath + 'content/themes/eckero-theme/js/vendor/'
+		},
+
+		'plugins': {
+
+			'wa-alert-messages': {
+				'src':  htmlPath + 'content/plugins/wa-alert-messages/js/alert-messages.js',
+				'dest': htmlPath + 'content/plugins/wa-alert-messages/js/min/',
+				'base': htmlPath + 'content/plugins/wa-alert-messages/js/',
+			},
+
+			'wa-cares-booking': {
+				'src': {
+					'root': [
+						htmlPath + 'content/plugins/wa-cares-booking/js/*.js',
+					],
+					'components': [
+						htmlPath + 'content/plugins/wa-cares-booking/js/components/area-map.js',
+						htmlPath + 'content/plugins/wa-cares-booking/js/components/premise-room-selection.js',
+						htmlPath + 'content/plugins/wa-cares-booking/js/components/rating.js',
+						htmlPath + 'content/plugins/wa-cares-booking/js/components/wa-vue-clndr.js'
+					]
+				},
+				'dest': {
+					'root':       htmlPath + 'content/plugins/wa-cares-booking/js/min/',
+					'components': htmlPath + 'content/plugins/wa-cares-booking/js/min/'
+				},
+				'base': htmlPath + 'content/plugins/wa-cares-booking/js/',
+			},
+
+			'wa-cookie-notice': {
+				'src': htmlPath + 'content/plugins/wa-cookie-notice/js/*.js',
+				'dest': htmlPath + 'content/plugins/wa-cookie-notice/js/min/',
+				'base': htmlPath + 'content/plugins/wa-cookie-notice/js/',
+			},
+			'wa-tables-module': {
+				'src': htmlPath + 'content/plugins/wa-tables-module/js/*.js',
+				'dest': htmlPath + 'content/plugins/wa-tables-module/js/min/',
+				'base': htmlPath + 'content/plugins/wa-tables-module/js/',
+			},
+		}
 	},
-	style: {
+
+	'style': {
 		src:  [
-			'/home/knubbe/www/westart/project/html/content/themes/theme/scss/**/*.scss',
-			'!/home/knubbe/www/westart/project/html/content/themes/theme/scss/font-awesome/font-awesome.scss'
+			htmlPath + 'content/themes/eckero-theme/scss/**/*.scss'
 		],
-		// dest: '/home/knubbe/www/westart/project/html/content/themes/theme/',
-		// base: '/home/knubbe/www/westart/project/html/content/themes/theme/scss'
+		// dest: '/htmlPath + 'content/themes/eckero-theme/',
+		// base: '/htmlPath + 'content/themes/eckero-theme/scss'
 		folders: [
-			'/home/knubbe/www/westart/project/html/content/themes/theme/'
+			htmlPath + 'content/themes/eckero-theme/'
 		]
 	}
 };
