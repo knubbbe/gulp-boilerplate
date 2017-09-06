@@ -68,6 +68,13 @@ gulp.task('watch', ['compile:js', 'compile:scss'], function() {
 	gulp.watch(gulpconfig.paths.style.src, { interval: 500 }, ['compile:scss']);
 });
 
+gulp.task('watch:js', ['compile:js'], function() {
+	gulp.watch(gulpconfig.paths.script.src, { interval: 500 }, ['compile:js']);
+});
+gulp.task('watch:scss', ['compile:scss'], function() {
+	gulp.watch(gulpconfig.paths.style.src, { interval: 500 }, ['compile:scss']);
+});
+
 gulp.task('browser-reload', function() {
 	browserSync.reload();
 });

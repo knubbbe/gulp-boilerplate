@@ -44,7 +44,7 @@ var paths = {
 var options = {
 	script: {},
 	style: {
-		outputStyle: 'expanded' //  nested, expanded, compact, compressed
+		outputStyle: 'compressed' //  nested, expanded, compact, compressed
 	},
 	eslint: {
 		quiet: true,
