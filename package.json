@@ -20,10 +20,10 @@
     "gulp-eslint": "^2.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^3.x",
     "gulp-uglify": "^1.5.3",
     "merge-stream": "^1.0.0",
-    "node-sass": "^3.9.3",
+    "node-sass": "^4.7.x",
     "path": "^0.12.7"
   }
 }
