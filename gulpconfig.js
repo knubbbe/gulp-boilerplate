@@ -2,10 +2,10 @@ var path = require('path');
 
 // Browser definitions for autoprefixer
 var autoprefixer_options = [
-'last 3 versions',
-'ie >= 9',
-'ios >= 7',
-'android >= 4.4'
+	'last 3 versions',
+	'ie >= 9',
+	'ios >= 7',
+	'android >= 4.4'
 ];
 
 var paths = {
@@ -17,13 +17,13 @@ var paths = {
 	},
 	script: {
 		src: [
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/scripts.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/clndr.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/jquery.fancybox.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/js.cookie.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/sticky-header.js',
-		'/home/knubbe/www/westart/project/html/content/themes/theme/js/wNumb.js',
-		'!/home/knubbe/www/westart/project/html/content/themes/theme/js/**/*.min.js'
+			'/home/knubbe/www/westart/project/html/content/themes/theme/js/scripts.js',
+			'/home/knubbe/www/westart/project/html/content/themes/theme/js/clndr.js',
+			'/home/knubbe/www/westart/project/html/content/themes/theme/js/jquery.fancybox.js',
+			'/home/knubbe/www/westart/project/html/content/themes/theme/js/js.cookie.js',
+			'/home/knubbe/www/westart/project/html/content/themes/theme/js/sticky-header.js',
+			'/home/knubbe/www/westart/project/html/content/themes/theme/js/wNumb.js',
+			'!/home/knubbe/www/westart/project/html/content/themes/theme/js/**/*.min.js'
 		],
 		dest: '/home/knubbe/www/westart/project/html/content/themes/theme/js/min',
 		base: '/home/knubbe/www/westart/project/html/content/themes/theme/js/'
